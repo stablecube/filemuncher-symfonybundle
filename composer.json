@@ -1,0 +1,16 @@
+{
+  "name": "stablecube/filemuncher-bundle",
+  "description": "Symfony bundle for the File Muncher service",
+  "license": "MIT",
+  "type": "symfony-bundle",
+  "require": {
+    "php": "^7.0|^7.2",
+    "symfony/framework-bundle": "^3.4|^4.0|^5.0",
+    "stablecube/filemuncher-client": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "StableCube\\FileMuncherBundle\\": "src/"
+    }
+  }
+}
