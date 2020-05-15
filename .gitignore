@@ -1,1 +1,5 @@
+# Dirs
 vendor/
+
+# Files
+composer.lock
