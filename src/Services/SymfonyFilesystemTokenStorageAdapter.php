@@ -27,6 +27,11 @@ class SymfonyFilesystemTokenStorageAdapter extends TokenStorageAdapterBase
         return $this->cache;
     }
 
+    private function getCacheKey() : string
+    {
+        return $this->cacheKey;
+    }
+
     public function getToken() : ?JsonWebToken
     {
         $cacheItem = $this->getCache()->getItem('backend-token');
