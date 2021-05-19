@@ -9,17 +9,13 @@
       <argument>%filemuncher.tmp_cache_dir%</argument>
     </service>
 
-    <service id="StableCube\FileMuncherClient\Services\OAuthTokenManager" class="StableCube\FileMuncherClient\Services\OAuthTokenManager">
-      <argument type="service" id="StableCube\FileMuncherClient\Services\ITokenStorageAdapter" />
+    <service id="StableCube\FileMuncherClient\Services\FileMuncherClientV1" class="StableCube\FileMuncherClient\Services\FileMuncherClientV1">
       <argument>%filemuncher.token_endpoint%</argument>
+      <argument>%filemuncher.workspace_hub_api_root%</argument>
       <argument>%filemuncher.client_id%</argument>
       <argument>%filemuncher.client_secret%</argument>
       <argument>%filemuncher.backend_scopes%</argument>
-    </service>
-    
-    <service id="StableCube\FileMuncherClient\Services\FileMuncherClientV1" class="StableCube\FileMuncherClient\Services\FileMuncherClientV1">
-      <argument type="service" id="StableCube\FileMuncherClient\Services\OAuthTokenManager" />
-      <argument>%filemuncher.workspace_hub_api_root%</argument>
+      <argument type="service" id="StableCube\FileMuncherClient\Services\ITokenStorageAdapter" />
     </service>
   </services>
 </container>
